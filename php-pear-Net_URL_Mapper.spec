@@ -7,7 +7,7 @@ Summary:	%{_pearname} - Provides a simple and flexible way to build nice URLs fo
 Summary(pl.UTF_8):	%{_pearname} - dostarcza prostego i elastycznego sposobu do tworzenia ładnie wyglądających URLi dla aplikacji web
 Name:		php-pear-%{_pearname}
 Version:	0.9.0
-Release:	3
+Release:	4
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
