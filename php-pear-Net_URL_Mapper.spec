@@ -3,8 +3,8 @@
 %define		_subclass	URL_Mapper
 %define		_status		beta
 %define		_pearname	Net_URL_Mapper
-Summary:	%{_pearname} - Provides a simple and flexible way to build nice URLs for web applications
-Summary(pl.UTF_8):	%{_pearname} - dostarcza prostego i elastycznego sposobu do tworzenia ładnie wyglądających URLi dla aplikacji web
+Summary:	%{_pearname} - a simple and flexible way to build nice URLs for web applications
+Summary(pl.UTF_8):	%{_pearname} - prosty i elastyczny sposób tworzenia ładnie wyglądających URL-i dla aplikacji WWW
 Name:		php-pear-%{_pearname}
 Version:	0.9.0
 Release:	4
@@ -35,16 +35,16 @@ frameworks and therefore can be used with your own router.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF_8
-Net_URL_Mapper dostarcza prostego i elastycznego sposobu do tworzenia
-ładnie wyglądających adresów URL dla aplikacji web.
+Net_URL_Mapper udostępnia prosty i elastyczny sposób tworzenia
+ładnie wyglądających adresów URL dla aplikacji WWW.
 
-Składnia URL jest zbliżona do tej jaką można spotkać w Ruby on Rails
+Składnia URL-a jest zbliżona do tej jaką można spotkać w Ruby on Rails
 czy module Routes języka Python i w związku z tym pakiet ten może być
 porównany z tym co nazywane jest tam routerem.
 
-Mimo to, w odróżnieniu od wspomnianych frameworków Net_URL_Mapper nie
-robi zajmuje się przekazywaniem zapytań i w związku z tym może być
-użyty wraz z Twoim routerem.
+Mimo to, w odróżnieniu od wspomnianych frameworków, Net_URL_Mapper nie
+zajmuje się przekazywaniem zapytań i w związku z tym może być użyty
+wraz z osobnym routerem.
 
 Ta klasa ma w PEAR status: %{_status}.
 
