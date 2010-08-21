@@ -7,13 +7,13 @@ Summary:	%{_pearname} - a simple and flexible way to build nice URLs for web app
 Summary(pl.UTF_8):	%{_pearname} - prosty i elastyczny sposób tworzenia ładnie wyglądających URL-i dla aplikacji WWW
 Name:		php-pear-%{_pearname}
 Version:	0.9.0
-Release:	5
+Release:	6
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	11a4d002f881ac5d957cdbb6b46139f7
 URL:		http://pear.php.net/package/Net_URL_Mapper/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.3
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-Net_URL >= 1.0.14
@@ -35,8 +35,8 @@ frameworks and therefore can be used with your own router.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF_8
-Net_URL_Mapper udostępnia prosty i elastyczny sposób tworzenia
-ładnie wyglądających adresów URL dla aplikacji WWW.
+Net_URL_Mapper udostępnia prosty i elastyczny sposób tworzenia ładnie
+wyglądających adresów URL dla aplikacji WWW.
 
 Składnia URL-a jest zbliżona do tej jaką można spotkać w Ruby on Rails
 czy module Routes języka Python i w związku z tym pakiet ten może być
@@ -52,9 +52,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
