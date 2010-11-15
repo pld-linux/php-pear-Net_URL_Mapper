@@ -1,17 +1,15 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Net
-%define		_subclass	URL_Mapper
 %define		_status		beta
 %define		_pearname	Net_URL_Mapper
 Summary:	%{_pearname} - a simple and flexible way to build nice URLs for web applications
 Summary(pl.UTF_8):	%{_pearname} - prosty i elastyczny sposób tworzenia ładnie wyglądających URL-i dla aplikacji WWW
 Name:		php-pear-%{_pearname}
-Version:	0.9.0
-Release:	6
+Version:	0.9.1
+Release:	1
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	11a4d002f881ac5d957cdbb6b46139f7
+# Source0-md5:	0d27b8d5a6a3e38b310807f2fcee996f
 URL:		http://pear.php.net/package/Net_URL_Mapper/
 BuildRequires:	php-pear-PEAR >= 1:1.4.3
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -19,6 +17,7 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
 Requires:	php-pear-Net_URL >= 1.0.14
 Requires:	php-pear-PEAR-core >= 1:1.4.3
+Obsoletes:	php-pear-Net_URL_Mapper-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,20 +48,6 @@ wraz z osobnym routerem.
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -70,6 +55,9 @@ Testy dla PEAR::%{_pearname}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+# tests should not be packaged
+%{__rm} -r $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -82,6 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/Net/URL/Mapper
 %{php_pear_dir}/Net/URL/Mapper.php
 
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/Net_URL_Mapper
+%{php_pear_dir}/data/%{_pearname}
