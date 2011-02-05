@@ -34,7 +34,7 @@ frameworks and therefore can be used with your own router.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl.UTF_8
+%description -l pl.UTF-8
 Net_URL_Mapper udostępnia prosty i elastyczny sposób tworzenia ładnie
 wyglądających adresów URL dla aplikacji WWW.
 
