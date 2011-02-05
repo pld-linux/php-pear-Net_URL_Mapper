@@ -2,7 +2,7 @@
 %define		_status		beta
 %define		_pearname	Net_URL_Mapper
 Summary:	%{_pearname} - a simple and flexible way to build nice URLs for web applications
-Summary(pl.UTF_8):	%{_pearname} - prosty i elastyczny sposób tworzenia ładnie wyglądających URL-i dla aplikacji WWW
+Summary(pl.UTF-8):	%{_pearname} - prosty i elastyczny sposób tworzenia ładnie wyglądających URL-i dla aplikacji WWW
 Name:		php-pear-%{_pearname}
 Version:	0.9.1
 Release:	1
