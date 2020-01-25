@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		beta
 %define		_pearname	Net_URL_Mapper
 Summary:	%{_pearname} - a simple and flexible way to build nice URLs for web applications
